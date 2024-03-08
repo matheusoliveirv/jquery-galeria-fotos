@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato';
+}
+
+body {
+    background-color: #212227;
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+header {
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+header .containerBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .center {
+    width: 120px;
+    height: 50px;
+    position: absolute;
+}
+
+header .btnEffect {
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+    /*background: transparent;*/
+    background: linear-gradient(to left, #743ad5, #d53a9d);
+    /*border: 1px solid #91C9FF;*/
+    outline: none;
+    transition: 1s ease-in-out;
+}
+.border-gradient {
+    border: 1px solid;
+    border-image-slice: 1;
+    border-width: 1px;
+}
+.border-gradient-purple {
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+}
+header .btnEffect span {
+    font-size: .9rem !important;
+}
+
+header svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: #FFF;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+}
+
+header .btnEffect:hover {
+    transition: 1s ease-in-out;
+    background: transparent;
+}
+
+header .btnEffect:hover svg {
+    stroke-dashoffset: -480;
+}
+
+header .btnEffect span {
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+form {
+    padding-bottom: 1.5rem;
+    text-align: center;
+    display: none;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.placeInput {
+    position: relative;
+    width: 13rem;
+    display: flex;
+}
+
+.placeBtn {
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+form .description{
+    padding-bottom: 1.8rem;
+}
+form .description span{
+    font-size: .75rem;
+}
+form button#cancel,
+form button#increment {
+    padding: .5rem;
+    width: 34px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+form button#cancel {
+    background: linear-gradient(to right, #DEA0A0, #DA5F5F);
+}
+
+form button#increment {
+    background: linear-gradient(to right, #55BED8, #5FFFCA);
+}
+
+input {
+    width: 12rem;
+    height: 2.3rem;
+    padding: 0 .5rem;
+    background-color: transparent;
+    border: 1px solid #FFF;
+    color: #EEE;
+    font-size: .8rem;
+    transition: ease-in-out .2s;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+label {
+    position: absolute;
+    left: .7rem;
+    top: .69rem;
+    font-size: .7rem;
+    color: #CCC;
+    transition: ease-in-out .2s;
+    opacity: 1;
+    pointer-events: none;
+}
+
+input:focus+label,
+input:valid+label {
+    background-color: #212227;
+    color: #EEE;
+    font-size: .53rem;
+    top: -.25rem;
+    padding: 0 .15rem;
+}
+
+input:focus {
+    box-shadow: 0 0 0 0;
+    border: 1px solid #FF8080;
+    outline: 0;
+    color: #EEE;
+}
+
+input:valid {
+    border: 1px solid #80DF9D;
+    color: #EEE;
+}
+
+input:valid+label {
+    color: #80DF9D;
+}
+
+input:focus:invalid+label {
+    color: #FF8080;
+}
+
+textarea:focus,
+select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    padding-left: 1.5rem;
+}
+
+ul li {
+    max-width: 25%;
+    list-style: none;
+    position: relative;
+    max-width: 23rem;
+    max-height: 12.5rem;
+    overflow-y: hidden;
+}
+
+ul li img {
+    width: 100%;
+}
+
+ul li:hover .overlay-imagem-link {
+    opacity: 1;
+}
+
+.overlay-imagem-link {
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all ease .3s;
+}
+
+.overlay-imagem-link a {
+    color: #FFF;
+    text-decoration: none;
+    font-size: .7rem;
+}

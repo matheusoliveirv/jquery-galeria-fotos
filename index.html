@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="shorcut icon" href="img/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="main.css">
+    <title>JQuery Gallery</title>
+</head>
+
+<body>
+    <header>
+        <h1>Galeria de Fotos</h1>
+        <div class="containerBtn">
+            <div class="center">
+                <button class="btnEffect border-gradient border-gradient-purple">
+                    <svg width="120px" height="40px" viewBox="0 0 180 60" class="border">
+                        <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                        <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                    </svg>
+                    <span>ADICIONAR</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <form>
+        <div class="description">
+            <span>
+                Utilize o campo abaixo para inserir novas imagens
+            </span>
+        </div>
+        <div class="container">
+            <div class="placeInput">
+                <input type="url" id="newImageAddress" required />
+                <label for="insert">Digite a URL da imagem</label>
+            </div>
+            <div class="placeBtn">
+                <button type="submit" id="increment" title="Adicionar"><i class="fa-solid fa-plus"></i></button>
+                <button type="reset" id="cancel" title="Recolher"><i class="fa-solid fa-chevron-up"></i></button>
+            </div>
+        </div>
+    </form>
+
+    <ul>
+        <li>
+            <img src="https://cdn.pixabay.com/photo/2014/12/27/16/38/planet-581239_1280.jpg"
+                alt="Universe" />
+            <div class="overlay-imagem-link">
+                <a href="https://cdn.pixabay.com/photo/2014/12/27/16/38/planet-581239_1280.jpg"
+                    target="_blank" title="Ver imagem em tamanho real">Ver imagem em tamanho real</a>
+            </div>
+        </li>
+        <li>
+            <img src="https://cdn.pixabay.com/photo/2016/07/02/12/21/eclipse-1492818_1280.jpg"
+                alt="Universe" />
+            <div class="overlay-imagem-link">
+                <a href="https://cdn.pixabay.com/photo/2016/07/02/12/21/eclipse-1492818_1280.jpg"
+                    target="_blank" title="Ver imagem em tamanho real">Ver imagem em tamanho real</a>
+            </div>
+        </li>
+        <li>
+            <img src="https://cdn.pixabay.com/photo/2017/08/15/08/23/stars-2643089_1280.jpg"
+                alt="Universe" />
+            <div class="overlay-imagem-link">
+                <a href="https://cdn.pixabay.com/photo/2017/08/15/08/23/stars-2643089_1280.jpg"
+                    target="_blank" title="Ver imagem em tamanho real">Ver imagem em tamanho real</a>
+            </div>
+        </li>
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
